@@ -10,8 +10,8 @@ int main()
     while(q--){
         ll x, y; cin >> x >> y;
         if(x==1) st.insert(y);
-        if(x==2) st.erase(st.find(y));
-        if(x==3) cout << (st.find(y)!=st.end() ? "Yes" : "No") << '\n';
+        if(x==2) st.erase(y);
+        if(x==3) cout << ((st.find(y)!=st.end()) ? "Yes" : "No") << '\n';
     }
     return 0;
 }
