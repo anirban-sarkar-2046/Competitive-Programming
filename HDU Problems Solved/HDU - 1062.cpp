@@ -10,22 +10,11 @@ int main()
     while(t--){
         string s;
         getline(cin, s);
-        vector<string> v;
+        stringstream ss(s);
         string a;
-        for(ll i=0; i<s.size(); i++){
-          a += s[i];
-          if(s[i]==' '){
-            a.pop_back();
+        while(ss>>a){
             reverse(a.begin(), a.end());
-            v.push_back(a);
-            a = "";
-          }
-        }
-        reverse(a.begin(), a.end());
-        v.push_back(a); 
-        
-        for(auto x : v){
-            cout << x << ' ';
+            cout << a << ' ';
         }
         cout << '\n';
     }
