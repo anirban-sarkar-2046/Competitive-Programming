@@ -26,7 +26,6 @@ int main()
         if(f(md)) l = md;
         else h = md-1;
     }
-    if(f(h)) cout << h << '\n';
-    else cout << l << '\n';
+    cout << (f(h) ? h : l) << '\n';
     return 0;
 }
