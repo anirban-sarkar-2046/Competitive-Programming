@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ull;
-typedef unsigned __int128 i128;
+typedef unsigned __int128 u128;
 
 int main()
 {
@@ -11,12 +11,12 @@ int main()
     while(t--){
         ull a, b; string s;
         cin >> a >> b >> s;
-        i128 c = 0;
+        u128 c = 0;
         for(auto d : s) c = c*10+(d-'0');
         ull ans = 1%c;
         while(b){
-            if(b&1) ans = (i128)ans*a%c;
-            a = (i128)a*a%c;
+            if(b&1) ans = (u128)ans*a%c;
+            a = (u128)a*a%c;
             b >>= 1;
         } 
         cout << ans << '\n';
