@@ -1,17 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ull;
-typedef __int128 i128;
-
-ull mulmod(ull a, ull b, i128 c){
-    ull ans = 0;
-    while(b){
-        if(b&1) ans = ((i128)ans+a)%c;
-        a = ((i128)a+a)%c;
-        b >>= 1;
-    }
-    return ans;
-}
+typedef unsigned __int128 i128;
 
 int main()
 {
@@ -25,8 +15,8 @@ int main()
         for(auto d : s) c = c*10+(d-'0');
         ull ans = 1%c;
         while(b){
-            if(b&1) ans = mulmod(ans,a,c);
-            a = mulmod(a,a,c);
+            if(b&1) ans = (i128)ans*a%c;
+            a = (i128)a*a%c;
             b >>= 1;
         } 
         cout << ans << '\n';
