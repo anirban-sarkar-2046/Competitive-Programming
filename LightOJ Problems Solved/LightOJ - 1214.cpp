@@ -15,8 +15,7 @@ int main()
         for(auto c : a){
             ans = (ans*10 + (c-'0')) % b;
         }
-        tc++; 
-        cout << "Case " << tc << ": " << (ans==0 ? "divisible" : "not divisible") << '\n';
+        cout << "Case " << ++tc << ": " << (ans==0 ? "divisible" : "not divisible") << '\n';
     }
     return 0;
 }
